@@ -579,90 +579,91 @@ void SetupImGuiStyle()
 	ImGuiStyle& style = ImGui::GetStyle();
 
 	style.Alpha = 1.0f;
-	style.WindowPadding = ImVec2(12.0f, 12.0f);
-	style.WindowRounding = 10.0f;
+	style.WindowPadding = ImVec2(14.0f, 14.0f);
+	style.WindowRounding = 8.0f;
 	style.WindowBorderSize = 1.0f;
 	style.WindowMinSize = ImVec2(30.0f, 30.0f);
 	style.WindowTitleAlign = ImVec2(0.5f, 0.5f);
 	style.WindowMenuButtonPosition = ImGuiDir_Right;
 
-	style.ChildRounding = 8.0f;
+	style.ChildRounding = 6.0f;
 	style.ChildBorderSize = 1.0f;
 
-	style.PopupRounding = 8.0f;
+	style.PopupRounding = 6.0f;
 	style.PopupBorderSize = 1.0f;
 
 	style.FramePadding = ImVec2(10.0f, 6.0f);
-	style.FrameRounding = 6.0f;
-	style.FrameBorderSize = 1.0f;
+	style.FrameRounding = 5.0f;
+	style.FrameBorderSize = 0.0f;
 
 	style.ItemSpacing = ImVec2(10.0f, 8.0f);
 	style.ItemInnerSpacing = ImVec2(8.0f, 6.0f);
 	style.IndentSpacing = 22.0f;
 	style.ColumnsMinSpacing = 8.0f;
 
-	style.ScrollbarSize = 16.0f;
-	style.ScrollbarRounding = 12.0f;
+	style.ScrollbarSize = 14.0f;
+	style.ScrollbarRounding = 10.0f;
 
 	style.GrabMinSize = 10.0f;
-	style.GrabRounding = 6.0f;
+	style.GrabRounding = 5.0f;
 
-	style.TabRounding = 8.0f;
-	style.TabBorderSize = 1.0f;
+	style.TabRounding = 6.0f;
+	style.TabBorderSize = 0.0f;
 
 	style.ButtonTextAlign = ImVec2(0.5f, 0.5f);
-	style.SelectableTextAlign = ImVec2(0.0f, 0.0f);
+	style.SelectableTextAlign = ImVec2(0.0f, 0.5f);
 	style.ColorButtonPosition = ImGuiDir_Right;
 
+	// Yxllow.Tech — dark background with yellow accent theme
 	ImVec4* colors = style.Colors;
-	colors[ImGuiCol_Text] = ImVec4(1.00f, 1.00f, 1.00f, 1.00f);
-	colors[ImGuiCol_TextDisabled] = ImVec4(0.60f, 0.60f, 0.60f, 1.00f);
-	colors[ImGuiCol_WindowBg] = ImVec4(0.08f, 0.08f, 0.12f, 0.98f);
-	colors[ImGuiCol_ChildBg] = ImVec4(0.10f, 0.10f, 0.14f, 0.65f);
-	colors[ImGuiCol_PopupBg] = ImVec4(0.07f, 0.07f, 0.10f, 0.96f);
-	colors[ImGuiCol_Border] = ImVec4(0.40f, 0.40f, 0.53f, 0.50f);
-	colors[ImGuiCol_BorderShadow] = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
-	colors[ImGuiCol_FrameBg] = ImVec4(0.13f, 0.13f, 0.18f, 1.00f);
-	colors[ImGuiCol_FrameBgHovered] = ImVec4(0.17f, 0.17f, 0.23f, 0.78f);
-	colors[ImGuiCol_FrameBgActive] = ImVec4(0.17f, 0.17f, 0.23f, 1.00f);
-	colors[ImGuiCol_TitleBg] = ImVec4(0.07f, 0.07f, 0.14f, 1.00f);
-	colors[ImGuiCol_TitleBgActive] = ImVec4(0.20f, 0.05f, 0.40f, 1.00f);
-	colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.07f, 0.07f, 0.14f, 0.75f);
-	colors[ImGuiCol_MenuBarBg] = ImVec4(0.08f, 0.08f, 0.12f, 1.00f);
-	colors[ImGuiCol_ScrollbarBg] = ImVec4(0.05f, 0.05f, 0.08f, 0.80f);
-	colors[ImGuiCol_ScrollbarGrab] = ImVec4(0.25f, 0.25f, 0.33f, 1.00f);
-	colors[ImGuiCol_ScrollbarGrabHovered] = ImVec4(0.35f, 0.35f, 0.43f, 1.00f);
-	colors[ImGuiCol_ScrollbarGrabActive] = ImVec4(0.45f, 0.45f, 0.53f, 1.00f);
-	colors[ImGuiCol_CheckMark] = ImVec4(0.80f, 0.20f, 0.98f, 1.00f);
-	colors[ImGuiCol_SliderGrab] = ImVec4(0.70f, 0.18f, 0.98f, 0.80f);
-	colors[ImGuiCol_SliderGrabActive] = ImVec4(0.85f, 0.26f, 1.00f, 1.00f);
-	colors[ImGuiCol_Button] = ImVec4(0.45f, 0.15f, 0.70f, 0.80f);
-	colors[ImGuiCol_ButtonHovered] = ImVec4(0.55f, 0.25f, 0.80f, 1.00f);
-	colors[ImGuiCol_ButtonActive] = ImVec4(0.65f, 0.35f, 0.90f, 1.00f);
-	colors[ImGuiCol_Header] = ImVec4(0.45f, 0.15f, 0.70f, 0.55f);
-	colors[ImGuiCol_HeaderHovered] = ImVec4(0.55f, 0.25f, 0.80f, 0.80f);
-	colors[ImGuiCol_HeaderActive] = ImVec4(0.65f, 0.35f, 0.90f, 1.00f);
-	colors[ImGuiCol_Separator] = ImVec4(0.40f, 0.40f, 0.53f, 0.50f);
-	colors[ImGuiCol_SeparatorHovered] = ImVec4(0.70f, 0.18f, 0.98f, 0.78f);
-	colors[ImGuiCol_SeparatorActive] = ImVec4(0.85f, 0.26f, 1.00f, 1.00f);
-	colors[ImGuiCol_ResizeGrip] = ImVec4(0.70f, 0.18f, 0.98f, 0.25f);
-	colors[ImGuiCol_ResizeGripHovered] = ImVec4(0.85f, 0.26f, 1.00f, 0.67f);
-	colors[ImGuiCol_ResizeGripActive] = ImVec4(0.90f, 0.32f, 1.00f, 0.95f);
-	colors[ImGuiCol_Tab] = ImVec4(0.45f, 0.15f, 0.70f, 0.80f);
-	colors[ImGuiCol_TabHovered] = ImVec4(0.55f, 0.25f, 0.80f, 1.00f);
-	colors[ImGuiCol_TabActive] = ImVec4(0.65f, 0.30f, 0.85f, 1.00f);
-	colors[ImGuiCol_TabUnfocused] = ImVec4(0.30f, 0.10f, 0.50f, 0.97f);
-	colors[ImGuiCol_TabUnfocusedActive] = ImVec4(0.40f, 0.15f, 0.65f, 1.00f);
-	colors[ImGuiCol_PlotLines] = ImVec4(0.66f, 0.66f, 0.66f, 1.00f);
-	colors[ImGuiCol_PlotLinesHovered] = ImVec4(0.70f, 0.18f, 0.98f, 0.78f);
-	colors[ImGuiCol_PlotHistogram] = ImVec4(0.70f, 0.18f, 0.98f, 0.78f);
-	colors[ImGuiCol_PlotHistogramHovered] = ImVec4(0.85f, 0.26f, 1.00f, 0.78f);
-	colors[ImGuiCol_TextSelectedBg] = ImVec4(0.70f, 0.18f, 0.98f, 0.35f);
-	colors[ImGuiCol_DragDropTarget] = ImVec4(0.85f, 0.26f, 1.00f, 0.95f);
-	colors[ImGuiCol_NavHighlight] = ImVec4(0.85f, 0.26f, 1.00f, 1.00f);
+	colors[ImGuiCol_Text]                  = ImVec4(0.95f, 0.95f, 0.90f, 1.00f);
+	colors[ImGuiCol_TextDisabled]          = ImVec4(0.50f, 0.48f, 0.40f, 1.00f);
+	colors[ImGuiCol_WindowBg]              = ImVec4(0.08f, 0.08f, 0.06f, 0.97f);
+	colors[ImGuiCol_ChildBg]               = ImVec4(0.11f, 0.10f, 0.07f, 0.65f);
+	colors[ImGuiCol_PopupBg]               = ImVec4(0.07f, 0.07f, 0.05f, 0.96f);
+	colors[ImGuiCol_Border]                = ImVec4(0.50f, 0.45f, 0.10f, 0.45f);
+	colors[ImGuiCol_BorderShadow]          = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
+	colors[ImGuiCol_FrameBg]               = ImVec4(0.14f, 0.13f, 0.08f, 1.00f);
+	colors[ImGuiCol_FrameBgHovered]        = ImVec4(0.22f, 0.20f, 0.08f, 0.80f);
+	colors[ImGuiCol_FrameBgActive]         = ImVec4(0.26f, 0.24f, 0.08f, 1.00f);
+	colors[ImGuiCol_TitleBg]               = ImVec4(0.06f, 0.06f, 0.04f, 1.00f);
+	colors[ImGuiCol_TitleBgActive]         = ImVec4(0.22f, 0.18f, 0.00f, 1.00f);
+	colors[ImGuiCol_TitleBgCollapsed]      = ImVec4(0.06f, 0.06f, 0.04f, 0.75f);
+	colors[ImGuiCol_MenuBarBg]             = ImVec4(0.08f, 0.08f, 0.06f, 1.00f);
+	colors[ImGuiCol_ScrollbarBg]           = ImVec4(0.05f, 0.05f, 0.03f, 0.80f);
+	colors[ImGuiCol_ScrollbarGrab]         = ImVec4(0.35f, 0.32f, 0.08f, 1.00f);
+	colors[ImGuiCol_ScrollbarGrabHovered]  = ImVec4(0.55f, 0.50f, 0.10f, 1.00f);
+	colors[ImGuiCol_ScrollbarGrabActive]   = ImVec4(0.75f, 0.68f, 0.10f, 1.00f);
+	colors[ImGuiCol_CheckMark]             = ImVec4(1.00f, 0.85f, 0.00f, 1.00f);
+	colors[ImGuiCol_SliderGrab]            = ImVec4(0.90f, 0.75f, 0.00f, 0.85f);
+	colors[ImGuiCol_SliderGrabActive]      = ImVec4(1.00f, 0.88f, 0.00f, 1.00f);
+	colors[ImGuiCol_Button]                = ImVec4(0.40f, 0.34f, 0.00f, 0.85f);
+	colors[ImGuiCol_ButtonHovered]         = ImVec4(0.60f, 0.52f, 0.00f, 1.00f);
+	colors[ImGuiCol_ButtonActive]          = ImVec4(0.80f, 0.70f, 0.00f, 1.00f);
+	colors[ImGuiCol_Header]                = ImVec4(0.40f, 0.34f, 0.00f, 0.55f);
+	colors[ImGuiCol_HeaderHovered]         = ImVec4(0.60f, 0.52f, 0.00f, 0.80f);
+	colors[ImGuiCol_HeaderActive]          = ImVec4(0.80f, 0.70f, 0.00f, 1.00f);
+	colors[ImGuiCol_Separator]             = ImVec4(0.45f, 0.40f, 0.10f, 0.50f);
+	colors[ImGuiCol_SeparatorHovered]      = ImVec4(1.00f, 0.85f, 0.00f, 0.78f);
+	colors[ImGuiCol_SeparatorActive]       = ImVec4(1.00f, 0.90f, 0.00f, 1.00f);
+	colors[ImGuiCol_ResizeGrip]            = ImVec4(0.90f, 0.75f, 0.00f, 0.20f);
+	colors[ImGuiCol_ResizeGripHovered]     = ImVec4(1.00f, 0.85f, 0.00f, 0.67f);
+	colors[ImGuiCol_ResizeGripActive]      = ImVec4(1.00f, 0.90f, 0.00f, 0.95f);
+	colors[ImGuiCol_Tab]                   = ImVec4(0.30f, 0.26f, 0.00f, 0.85f);
+	colors[ImGuiCol_TabHovered]            = ImVec4(0.60f, 0.52f, 0.00f, 1.00f);
+	colors[ImGuiCol_TabActive]             = ImVec4(0.70f, 0.60f, 0.00f, 1.00f);
+	colors[ImGuiCol_TabUnfocused]          = ImVec4(0.18f, 0.16f, 0.02f, 0.97f);
+	colors[ImGuiCol_TabUnfocusedActive]    = ImVec4(0.35f, 0.30f, 0.00f, 1.00f);
+	colors[ImGuiCol_PlotLines]             = ImVec4(0.70f, 0.65f, 0.30f, 1.00f);
+	colors[ImGuiCol_PlotLinesHovered]      = ImVec4(1.00f, 0.85f, 0.00f, 0.78f);
+	colors[ImGuiCol_PlotHistogram]         = ImVec4(0.90f, 0.75f, 0.00f, 0.78f);
+	colors[ImGuiCol_PlotHistogramHovered]  = ImVec4(1.00f, 0.88f, 0.00f, 0.78f);
+	colors[ImGuiCol_TextSelectedBg]        = ImVec4(1.00f, 0.85f, 0.00f, 0.30f);
+	colors[ImGuiCol_DragDropTarget]        = ImVec4(1.00f, 0.88f, 0.00f, 0.95f);
+	colors[ImGuiCol_NavHighlight]          = ImVec4(1.00f, 0.85f, 0.00f, 1.00f);
 	colors[ImGuiCol_NavWindowingHighlight] = ImVec4(1.00f, 1.00f, 1.00f, 0.75f);
-	colors[ImGuiCol_NavWindowingDimBg] = ImVec4(0.80f, 0.80f, 0.80f, 0.20f);
-	colors[ImGuiCol_ModalWindowDimBg] = ImVec4(0.00f, 0.00f, 0.00f, 0.70f);
+	colors[ImGuiCol_NavWindowingDimBg]     = ImVec4(0.80f, 0.80f, 0.80f, 0.20f);
+	colors[ImGuiCol_ModalWindowDimBg]      = ImVec4(0.00f, 0.00f, 0.00f, 0.70f);
 }
 
 std::string getHWID();
@@ -2159,51 +2160,47 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 	}
 
 	if (show) {
-		ImGui::SetNextWindowSize(ImVec2(900, 450), ImGuiCond_FirstUseEver);
-		ImGui::Begin(("VitriumBot [Made by tntgamer0815 | needlesspage819]"), &show, ImGuiWindowFlags_NoCollapse);
+		ImGui::SetNextWindowSize(ImVec2(820, 480), ImGuiCond_FirstUseEver);
+		ImGui::Begin("Yxllow.Tech", &show, ImGuiWindowFlags_NoCollapse);
 
 		if (ImGui::BeginTabBar("MainTabBar")) {
 
-			if (ImGui::BeginTabItem("SDK Status")) {
-				ImGui::Text("SDK Status:");
+			if (ImGui::BeginTabItem(" Status ")) {
+				ImGui::TextColored(ImVec4(1.0f, 0.85f, 0.0f, 1.0f), "SDK Status");
 				ImGui::SameLine();
-				if (g_SdkAndHooksInitialized.load()) { 
-					ImGui::TextColored(ImVec4(0.0f, 1.0f, 0.0f, 1.0f), "Initialized Successfully");
+				if (g_SdkAndHooksInitialized.load()) {
+					ImGui::TextColored(ImVec4(0.0f, 1.0f, 0.0f, 1.0f), "- Initialized");
 					if (g_pRLSDK) ImGui::TextDisabled(" (%s)", g_pRLSDK->GetBuildType().c_str());
 				}
 				else {
-					ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "Initialization Failed");
-					ImGui::TextWrapped("Error: SDK/Hooks failed to initialize (Check log.txt)."); 
+					ImGui::TextColored(ImVec4(1.0f, 0.3f, 0.3f, 1.0f), "- Failed");
+					ImGui::TextWrapped("SDK/Hooks failed to initialize. Check log.txt for details.");
 				}
 				ImGui::Separator();
 
-				ImGui::Text("Game Info:"); 
+				ImGui::TextColored(ImVec4(1.0f, 0.85f, 0.0f, 1.0f), "Game State");
 				if (g_SdkAndHooksInitialized && g_pRLSDK) {
-					SDK::AGameEvent ge_debug = g_pRLSDK->GetCurrentGameEvent(); 
+					SDK::AGameEvent ge_debug = g_pRLSDK->GetCurrentGameEvent();
 					if (ge_debug.IsValid()) {
-						ImGui::Text("GameEvent Found: %s", Logger::to_hex(ge_debug.Address).c_str());
+						ImGui::TextDisabled("GameEvent @ %s", Logger::to_hex(ge_debug.Address).c_str());
 						ImGui::Separator();
-						ImGui::Text("Ball Info:");
+						ImGui::Text("Ball");
 
-							SDK::ABall ball = g_pRLSDK->GetBall();
-							if (!ball.IsValid()) throw std::runtime_error("Ball not found");
-							SDK::ABall ball_debug = ball;
-							if (ball_debug.IsValid()) {
-								SDK::FVectorData ballLoc_debug = ball_debug.GetLocation(g_pRLSDK->GetMemoryManager());
-								SDK::FVectorData ballVel_debug = ball_debug.GetVelocity(g_pRLSDK->GetMemoryManager());
-								ImGui::Text("  Ball Loc: X=%.1f, Y=%.1f, Z=%.1f", ballLoc_debug.X, ballLoc_debug.Y, ballLoc_debug.Z);
-								ImGui::Text("  Ball Vel: X=%.1f, Y=%.1f, Z=%.1f", ballVel_debug.X, ballVel_debug.Y, ballVel_debug.Z);
-
-								ImGui::Text("Ball GetLocation raw: X=%.1f Y=%.1f Z=%.1f",
-									ballLoc_debug.X, ballLoc_debug.Y, ballLoc_debug.Z);
-								ImGui::Text("(Valid arena: X[-4096,4096] Y[-5120,5120] Z[0,2044])");
-							}
-							else {
-								ImGui::Text("  Ball object pointer invalid.");
-							}
+						SDK::ABall ball = g_pRLSDK->GetBall();
+						if (!ball.IsValid()) throw std::runtime_error("Ball not found");
+						SDK::ABall ball_debug = ball;
+						if (ball_debug.IsValid()) {
+							SDK::FVectorData ballLoc_debug = ball_debug.GetLocation(g_pRLSDK->GetMemoryManager());
+							SDK::FVectorData ballVel_debug = ball_debug.GetVelocity(g_pRLSDK->GetMemoryManager());
+							ImGui::TextDisabled("  Loc  X=%.1f  Y=%.1f  Z=%.1f", ballLoc_debug.X, ballLoc_debug.Y, ballLoc_debug.Z);
+							ImGui::TextDisabled("  Vel  X=%.1f  Y=%.1f  Z=%.1f", ballVel_debug.X, ballVel_debug.Y, ballVel_debug.Z);
+						}
+						else {
+							ImGui::TextDisabled("  Ball pointer invalid.");
+						}
 
 						ImGui::Separator();
-						ImGui::Text("Car Info:");
+						ImGui::Text("Cars");
 						auto cars_debug = ge_debug.GetCars(g_pRLSDK->GetMemoryManager());
 						if (!cars_debug.empty()) {
 							for (size_t i = 0; i < cars_debug.size(); ++i) {
@@ -2215,109 +2212,109 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 										playerName_debug = pri_debug.GetPlayerName(g_pRLSDK->GetMemoryManager());
 									}
 									std::string nameStr_debug = (playerName_debug.empty() ? "Car[" + std::to_string(i) + "]" : std::string(playerName_debug.begin(), playerName_debug.end()));
-
 									SDK::FVectorData carLoc_debug = car_debug.GetLocation(g_pRLSDK->GetMemoryManager());
 									SDK::FVectorData carVel_debug = car_debug.GetVelocity(g_pRLSDK->GetMemoryManager());
-									ImGui::Text("  %s:", nameStr_debug.c_str());
-									ImGui::Text("    Loc: X=%.1f, Y=%.1f, Z=%.1f", carLoc_debug.X, carLoc_debug.Y, carLoc_debug.Z);
-									ImGui::Text("    Vel: X=%.1f, Y=%.1f, Z=%.1f", carVel_debug.X, carVel_debug.Y, carVel_debug.Z);
+									ImGui::TextColored(ImVec4(1.0f, 0.85f, 0.0f, 0.9f), "  %s", nameStr_debug.c_str());
+									ImGui::TextDisabled("    Loc  X=%.1f  Y=%.1f  Z=%.1f", carLoc_debug.X, carLoc_debug.Y, carLoc_debug.Z);
+									ImGui::TextDisabled("    Vel  X=%.1f  Y=%.1f  Z=%.1f", carVel_debug.X, carVel_debug.Y, carVel_debug.Z);
 								}
 							}
 						}
 						else {
-							ImGui::Text("  No cars found in GameEvent array.");
+							ImGui::TextDisabled("  No cars found.");
 						}
-
 					}
 					else {
-						ImGui::Text("GameEvent Not Found (Not in match?)");
+						ImGui::TextDisabled("No active game event detected.");
 					}
 				}
 				else {
-					ImGui::Text("SDK Not Initialized.");
+					ImGui::TextDisabled("SDK not initialized.");
 				}
 
 				ImGui::EndTabItem();
 			}
 
-			if (ImGui::BeginTabItem("Visuals")) {
-				ImGui::Text("Drawing Options:");
-				ImGui::Checkbox("Draw Ball (2D Circle)", &g_DrawBallCircle);
-				ImGui::SameLine(); HelpMarker("Draws a simple 2D circle around the ball.");
+			if (ImGui::BeginTabItem(" Visuals ")) {
+				ImGui::TextColored(ImVec4(1.0f, 0.85f, 0.0f, 1.0f), "Drawing Options");
+				ImGui::Spacing();
+
+				ImGui::Checkbox("Ball  —  2D Circle", &g_DrawBallCircle);
+				ImGui::SameLine(); HelpMarker("Draws a 2D circle around the ball.");
 				ImGui::SameLine(); ImGui::ColorEdit4("##ColorCircle2D", (float*)&g_ColorBallCircle2D, ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_AlphaBar);
 
-				ImGui::Checkbox("Draw Ball (3D Sphere)", &g_Draw3DSphere);
-				ImGui::SameLine(); HelpMarker("Draws a wireframe sphere around the ball. Overrides 2D Circle if both are checked.");
+				ImGui::Checkbox("Ball  —  3D Sphere", &g_Draw3DSphere);
+				ImGui::SameLine(); HelpMarker("Draws a wireframe sphere around the ball. Overrides 2D Circle if both are enabled.");
 				ImGui::SameLine(); ImGui::ColorEdit4("##ColorSphere3D", (float*)&g_ColorBallSphere3D, ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_AlphaBar);
 
-				ImGui::Checkbox("Draw Ball Prediction", &g_DrawBallPrediction);
+				ImGui::Checkbox("Ball  —  Prediction", &g_DrawBallPrediction);
 				ImGui::SameLine(); HelpMarker("Draws a line indicating the ball's predicted path.");
 
-				ImGui::Checkbox("Draw Car Hitboxes (Octane)", &g_DrawCarHitboxes);
-				ImGui::SameLine(); HelpMarker("Draws a wireframe box representing the car's hitbox (currently uses Octane dimensions for all).");
+				ImGui::Separator();
+
+				ImGui::Checkbox("Cars  —  Hitboxes", &g_DrawCarHitboxes);
+				ImGui::SameLine(); HelpMarker("Draws a wireframe hitbox around cars (Octane dimensions).");
 				ImGui::SameLine(); ImGui::ColorEdit4("##ColorHitbox", (float*)&g_ColorCarHitbox, ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_AlphaBar);
 
-				ImGui::Checkbox("Draw Car Distance", &g_DrawPlayerDistanceText);
-				ImGui::SameLine(); HelpMarker("Draws text to distance of the cars.");
+				ImGui::Checkbox("Cars  —  Distance", &g_DrawPlayerDistanceText);
+				ImGui::SameLine(); HelpMarker("Draws distance text above each car.");
 				ImGui::SameLine(); ImGui::ColorEdit4("##ColorPlayerDistanceText", (float*)&g_ColorPlayerDistanceText, ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_AlphaBar);
 
-				ImGui::Checkbox("Draw Velocity Pointers", &g_DrawVelocityPointers);
-				ImGui::SameLine(); HelpMarker("Draws an arrow indicating the direction and magnitude of velocity for cars and the ball.");
-
+				ImGui::Checkbox("Cars  —  Velocity Arrows", &g_DrawVelocityPointers);
+				ImGui::SameLine(); HelpMarker("Draws arrows showing velocity direction and magnitude.");
 				ImGui::Indent();
-				ImGui::Text("Ball Arrow Color:"); ImGui::SameLine();
+				ImGui::TextDisabled("Ball arrow color:");  ImGui::SameLine();
 				ImGui::ColorEdit4("##ColorVelBall", (float*)&g_ColorVelocityArrowBall, ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_AlphaBar);
-				ImGui::Text("Car Arrow Color:"); ImGui::SameLine();
+				ImGui::TextDisabled("Car arrow color:");   ImGui::SameLine();
 				ImGui::ColorEdit4("##ColorVelCar", (float*)&g_ColorVelocityArrowCar, ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_AlphaBar);
 				ImGui::Unindent();
 
-
-				ImGui::Checkbox("Draw Boost Indicators", &g_DrawOpponentBoost);
-				ImGui::SameLine(); HelpMarker("Shows a circular indicator of boost amount above opponents' cars.");
+				ImGui::Checkbox("Cars  —  Boost Indicators", &g_DrawOpponentBoost);
+				ImGui::SameLine(); HelpMarker("Shows boost percentage above each car.");
 				ImGui::SameLine(); ImGui::ColorEdit4("##ColorBoostCircle", (float*)&g_ColorBoostCircle, ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_AlphaBar);
-
 				ImGui::Indent();
-				ImGui::Checkbox("Use Team Colors For Boost Indicators", &g_UseTeamColorsForBoost);
-				ImGui::SameLine(); HelpMarker("Uses player team colors for boost circles instead of the default color.");
+				ImGui::Checkbox("Use team colors for boost indicators", &g_UseTeamColorsForBoost);
+				ImGui::SameLine(); HelpMarker("Uses each player's team color instead of the default color.");
 				ImGui::Unindent();
 
-				ImGui::Checkbox("Draw Tracers", &g_DrawTracers);
-				ImGui::SameLine(); HelpMarker("Shows lines to the cars.");
+				ImGui::Checkbox("Cars  —  Tracers", &g_DrawTracers);
+				ImGui::SameLine(); HelpMarker("Draws lines from the screen edge to each car.");
 				ImGui::SameLine(); ImGui::ColorEdit4("##ColorTracers", (float*)&g_ColorTracers, ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_AlphaBar);
-
 				if (g_DrawTracers) {
 					ImGui::Indent();
-					ImGui::Checkbox("Use Team Colors For Tracers", &g_UseTeamColorsForTracers);
+					ImGui::Checkbox("Use team colors for tracers", &g_UseTeamColorsForTracers);
 					ImGui::Unindent();
 				}
 
 				ImGui::Separator();
-				ImGui::Text("Debug Overlays:");
-				if (ImGui::Checkbox("Show Live Debug Info", &g_ShowDebugDrawingInfo)) g_SettingsChangedForClient = true;
-				ImGui::SameLine(); HelpMarker("Shows live camera and screen position info in the menu when active.");
-
-				ImGui::Checkbox("Draw Boost Pad Timers", &g_DrawBoostPadTimers);
-				ImGui::SameLine(); HelpMarker("Shows countdown timers for boost pads when they're picked up.");
+				ImGui::TextColored(ImVec4(1.0f, 0.85f, 0.0f, 1.0f), "Debug");
+				if (ImGui::Checkbox("Live debug overlay", &g_ShowDebugDrawingInfo)) g_SettingsChangedForClient = true;
+				ImGui::SameLine(); HelpMarker("Shows camera and screen position info while the menu is open.");
+				ImGui::Checkbox("Boost pad timers", &g_DrawBoostPadTimers);
+				ImGui::SameLine(); HelpMarker("Shows countdown timers on boost pads after pickup.");
 
 				ImGui::EndTabItem();
 			}
 
-			if (ImGui::BeginTabItem("Bot Settings (Client)")) {
-				ImGui::Text("Controls for the Python bot client (only_nexto.py).");
+			if (ImGui::BeginTabItem(" Bot ")) {
+				ImGui::TextColored(ImVec4(1.0f, 0.85f, 0.0f, 1.0f), "Bot Client Settings");
+				ImGui::TextDisabled("Controls for the Python bot client.");
 				ImGui::Separator();
 
 				bool tempBotEnabled = g_BotEnabledForClient.load();
-				if (ImGui::Checkbox("Enable Bot (Client)", &tempBotEnabled)) {
+				if (ImGui::Checkbox("Enable Bot", &tempBotEnabled)) {
 					g_BotEnabledForClient.store(tempBotEnabled);
 					{
 						std::lock_guard<std::mutex> lock(g_SettingsMutex);
 						g_SettingsChangedForClient = true;
 					}
 				}
-				ImGui::SameLine(); HelpMarker("Toggles the bot logic in the Client.");
+				ImGui::SameLine(); HelpMarker("Toggles bot logic in the connected Python client.");
+
+				ImGui::Spacing();
 
 				const char* bot_display_names[] = { "Nexto", "NextMortal", "Genesis", "Unstable", "Element", "Carbon", "Karma (Platin)", "The Bog V6", "necto" };
-				const char* bot_server_names[] = { "Nexto", "NextMortal", "Genesis", "unstable", "Element", "Carbon", "karma", "thebog", "necto" };
+				const char* bot_server_names[]   = { "Nexto", "NextMortal", "Genesis", "unstable", "Element", "Carbon", "karma",          "thebog",     "necto" };
 				static int current_bot_idx = 0;
 				std::string current_selected_bot_local;
 				{
@@ -2330,45 +2327,43 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 						break;
 					}
 				}
-
-				if (ImGui::Combo("Selected Bot", &current_bot_idx, bot_display_names, IM_ARRAYSIZE(bot_display_names))) {
+				if (ImGui::Combo("Bot Model", &current_bot_idx, bot_display_names, IM_ARRAYSIZE(bot_display_names))) {
 					{
 						std::lock_guard<std::mutex> lock(g_SettingsMutex);
 						g_SelectedBotNameForClient = bot_server_names[current_bot_idx];
 						g_SettingsChangedForClient = true;
 					}
 				}
-				ImGui::SameLine(); HelpMarker("Select the bot to be used by the Client.");
+				ImGui::SameLine(); HelpMarker("Select which bot model the client should use.");
 
 				ImGui::Spacing();
 
-				ImGui::Text("Bot Toggle Key: %s", g_BotToggleKeyName.c_str());
+				ImGui::Text("Toggle Key:  %s", g_BotToggleKeyName.c_str());
 				ImGui::SameLine();
 				if (g_IsSettingBotToggleKey.load()) {
-					ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Press a key... (ESC to cancel)");
+					ImGui::TextColored(ImVec4(1.0f, 0.85f, 0.0f, 1.0f), "Press a key...  (ESC to cancel)");
 				}
 				else {
-					if (ImGui::Button("Set Toggle Key")) {
+					if (ImGui::Button("Change Key")) {
 						g_IsSettingBotToggleKey.store(true);
 					}
 				}
-				ImGui::Spacing();
+
+				ImGui::Separator();
 
 				bool tempAutoBallCam = g_AutoBallCamForClient.load();
-				if (ImGui::Checkbox("Enable Auto Ball Cam (Python)", &tempAutoBallCam)) {
+				if (ImGui::Checkbox("Auto Ball Cam", &tempAutoBallCam)) {
 					g_AutoBallCamForClient.store(tempAutoBallCam);
 					g_SettingsChangedForClient = true;
 				}
-				ImGui::SameLine(); HelpMarker("Toggles auto ball cam in the Client.");
+				ImGui::SameLine(); HelpMarker("Toggles auto ball cam in the Python client.");
 
 				bool tempSpeedflipKickoff = g_SpeedflipKickoffForClient.load();
-				if (ImGui::Checkbox("Enable Speedflip Kickoff (Python)", &tempSpeedflipKickoff)) {
+				if (ImGui::Checkbox("Speedflip Kickoff", &tempSpeedflipKickoff)) {
 					g_SpeedflipKickoffForClient.store(tempSpeedflipKickoff);
 					g_SettingsChangedForClient = true;
 				}
-				ImGui::SameLine(); HelpMarker("Toggles speedflip kickoff in the Client.");
-
-				ImGui::Separator();
+				ImGui::SameLine(); HelpMarker("Toggles speedflip kickoff behaviour in the Python client.");
 
 				bool tempPythonMonitoring = false;
 				g_PythonMonitoringForClient.store(false);
@@ -2376,46 +2371,49 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 				ImGui::EndTabItem();
 			}
 
-			if (ImGui::BeginTabItem("Connection Status")) {
-				ImGui::Text("Server & Client Connection Information");
+			if (ImGui::BeginTabItem(" Connection ")) {
+				ImGui::TextColored(ImVec4(1.0f, 0.85f, 0.0f, 1.0f), "TCP Bridge");
 				ImGui::Separator();
 
-				ImGui::Text("Client Connected: ");
+				ImGui::Text("Client:  ");
 				ImGui::SameLine();
 				if (g_ClientConnected.load()) {
-					ImGui::TextColored(ImVec4(0.0f, 1.0f, 0.0f, 1.0f), "YES");
+					ImGui::TextColored(ImVec4(0.0f, 1.0f, 0.4f, 1.0f), "Connected");
 				}
 				else {
-					ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "NO");
+					ImGui::TextColored(ImVec4(1.0f, 0.3f, 0.3f, 1.0f), "Disconnected");
 				}
 
 				auto now = std::chrono::steady_clock::now();
 				auto uptime_duration = std::chrono::duration_cast<std::chrono::seconds>(now - g_ServerStartTime);
 				long long uptime_s = uptime_duration.count();
-				ImGui::Text("Server Uptime: %lldh %lldm %llds", uptime_s / 3600, (uptime_s % 3600) / 60, uptime_s % 60);
+				long long uptime_h = uptime_s / 3600;
+				long long uptime_m = (uptime_s % 3600) / 60;
+				long long uptime_rem = uptime_s % 60;
+				ImGui::Text("Uptime:  %lldh %02lldm %02llds", uptime_h, uptime_m, uptime_rem);
+				ImGui::Text("Total connections:  %llu", g_ConnectionsEstablished.load());
 
-				ImGui::Text("Total Connections Established: %llu", g_ConnectionsEstablished.load());
 				ImGui::Separator();
-				ImGui::Text("Data Sent to Client:");
-				ImGui::Text("  Packets Sent: %llu", g_PacketsSentToClient.load());
-				ImGui::Text("  Bytes Sent: %llu bytes", g_BytesSentToClient.load());
-
+				ImGui::TextColored(ImVec4(1.0f, 0.85f, 0.0f, 1.0f), "Data Transfer");
+				ImGui::Text("Packets sent:  %llu", g_PacketsSentToClient.load());
+				ImGui::Text("Bytes sent:    %llu", g_BytesSentToClient.load());
 				if (g_LastPacketSentTimeValid.load()) {
 					auto last_sent_duration = std::chrono::duration_cast<std::chrono::seconds>(now - g_LastPacketSentTime);
-					ImGui::Text("  Time Since Last Packet Sent: %llds ago", last_sent_duration.count());
+					ImGui::Text("Last packet:   %llds ago", last_sent_duration.count());
 				}
 				else {
-					ImGui::Text("  Time Since Last Packet Sent: N/A (no packets sent yet or client disconnected)");
+					ImGui::TextDisabled("Last packet:   N/A");
 				}
 
 				ImGui::EndTabItem();
 			}
 
-			if (ImGui::BeginTabItem("Misc")) {
-				ImGui::Text("DLL Management:");
-				if (ImGui::Button("Eject DLL")) {
-					Logger::Info("Eject button clicked. Shutting down Kiero and preparing to unload DLL.");
-					kiero::shutdown(); 
+			if (ImGui::BeginTabItem(" Settings ")) {
+				ImGui::TextColored(ImVec4(1.0f, 0.85f, 0.0f, 1.0f), "DLL Management");
+				ImGui::Spacing();
+				if (ImGui::Button("  Eject DLL  ")) {
+					Logger::Info("Eject requested — shutting down Kiero.");
+					kiero::shutdown();
 					uintptr_t hThread = _beginthreadex(NULL, 0, EjectThread, reinterpret_cast<void*>(g_hModule), 0, NULL);
 					if (hThread != 0) {
 						CloseHandle(reinterpret_cast<HANDLE>(hThread));
@@ -2425,7 +2423,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 					}
 				}
 				ImGui::SameLine();
-				ImGui::TextDisabled("(Unloads the DLL)");
+				ImGui::TextDisabled("Unloads the DLL from the process.");
 
 				ImGui::EndTabItem();
 			}
